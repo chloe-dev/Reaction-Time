@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+/* Flexbox -> Margin -> Border -> Background -> Padding -> Height/Width -> Objects */
+
+/*
+ * Styling for all pages.
+ */
+
+/* FONTS */
+
+@font-face {
+    font-family: "IBM Plex Mono Regular", monospace;
+    src: url("../assets/fonts/IBMPlexMono-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "IBM Plex Mono Italic", monospace;
+    src: url("../assets/fonts/IBMPlexMono-Italic.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "IBM Plex Mono Bold", monospace;
+    src: url("../assets/fonts/IBMPlexMono-Bold.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "IBM Plex Mono BoldItalic", monospace;
+    src: url("../assets/fonts/IBMPlexMono-BoldItalic.ttf") format("ttf");
+}
+
+/* GENERAL */
+
+body {
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: #000000;
+
+    color: #E0E0E0;
+
+    font-family: "IBM Plex Mono Regular", monospace;
+}
+
+.wrapper {
+    margin: 0 auto;
+
+    width: 33.33%;
+
+    box-sizing: border-box;
+}
+
+.container {
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    background-color: #1F1F1F;
+
+    padding: 10px;
+}
+
+a:not(.nav-link) {
+    color: #7F7FFF;
+
+    text-decoration: none;
+
+    transition: all 0.5s ease;
+}
+
+a:hover:not(.nav-link) {
+    border-radius: 3px;
+
+    background-color: #7F7FFF;
+
+    padding: 1px 3px;
+
+    color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+hr {
+    margin: 15px 0 15px 0;
+}
+
+@media (max-width: 1280px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+/* NAVIGATION */
+
+nav.container {
+    display: flex;
+
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.nav-link {
+    display: block;
+
+    flex-grow: 1;
+
+    padding: 10px;
+
+    color: #7F7FFF;
+
+    text-align: center;
+
+    transition: all 0.5s ease;
+}
+
+.nav-link:hover {
+    background-color: #7F7FFF;
+
+    color: #000000;
+}
+
+/* REACTION TIME */
+
+.reaction-assessment {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 0;
+
+    border-radius: 10px;
+
+    height: 25vh;
+
+    color: #E0E0E0;
+
+    font-size: 2.0vh;
+
+    text-align: center;
+
+    text-wrap: wrap;
+
+    white-space: pre;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    -ms-user-select: none;
+}
+
+.reaction-assessment-info {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+
+    gap: 10px;
+}
+
+.reaction-assessment-info-item {
+    border-radius: 10px;
+
+    background-color: #2F2F2F;
+
+    padding: 10px;
+
+    color: #E0E0E0;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+}
